@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahil Khan - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Sahil<span> Khan</span></h1>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="home" id="home">
+    <div class="container home-content">
+      <div class="text">
+        <h2>Hi, I'm <span>Sahil Khan</span></h2>
+        <h3>Frontend Developer</h3>
+        <p>I am a detail-oriented Frontend Developer skilled in HTML, CSS, and JavaScript. Passionate about building responsive, user-friendly websites. Currently pursuing BCA at Brainware University and eager to contribute to innovative web projects in a dynamic team environment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="container">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="about-content">
+        <div class="image">
+          <img src="c:\Users\91954\OneDrive\Pictures\Camera Roll\Picsart_22-10-08_19-23-58-645.jpg" alt="Sahil Khan">
+        </div>
+        <div class="info">
+          <h3>Frontend Developer</h3>
+          <p>I am a detail-oriented Frontend Developer skilled in HTML, CSS, and JavaScript. Currently pursuing BCA at Brainware University. I'm passionate about creating sleek, modern websites and always exploring new ways to grow in frontend development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="journey section" id="journey">
+    <div class="container">
+      <h2 class="section-title">My <span>Journey</span></h2>
+      <div class="grid">
+        <div class="box">
+          <h3>Education</h3>
+          <ul>
+            <li><strong>BCA</strong> - Brainware University - 9.00 CGPA (till 5th Semester)</li>
+            <li><strong>12th</strong> - Contai Public School (2023) - 60%</li>
+            <li><strong>10th</strong> - Vivekananda Academy (2021) - 71%</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Certificates</h3>
+          <ul>
+            <li>TechFusion - Brainware University</li>
+            <li>Circuit Craft 2025 - Brainware University</li>
+            <li>Session by LTIMindtree</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills section" id="skills">
+    <div class="container">
+      <h2 class="section-title">My <span>Skills</span></h2>
+      <div class="grid">
+        <div class="box">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>C / C++</li>
+            <li>Python</li>
+            <li>Java</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Languages Known</h3>
+          <ul>
+            <li>English</li>
+            <li>Hindi</li>
+            <li>Bengali</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact <span>Me!</span></h2>
+      <form class="contact-form" action="https://formspree.io/f/mblkpodj" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="phone" placeholder="Mobile Number">
+        <input type="text" name="subject" placeholder="Email Subject">
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      
+      <div class="contact-details">
+        <p><strong>Phone:</strong> +91 9547346589</p>
+        <p><strong>Email:</strong> sahilfromvillage@gmail.com</p>
+        <p><strong>Address:</strong> Digha, West Bengal, Mukundapur, 721446</p>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/sahil-khan-0354a9305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/godzi-404" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/qr/VXI3ZW45JOUGN1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/khan_sahil_404?igsh=MTl1Z3R5MzRpNm1pcA==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/sahil.khan.447225" target="_blank"><i class="fab fa-facebook"></i></a>
+
+      </div>
+    </div>
+  </section>
+  <script>
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        alert("✅ Thank you! Your message has been sent.");
+        form.reset();
+      } else {
+        alert("❌ Oops! Something went wrong.");
+      }
+    });
+  </script>
+  
+
+  <footer>
+    <div class="container">
+      <p>Sahil Khan | PORTFOLIO.</p>
+    </div>
+  </footer>
+</body>
+</html> 
